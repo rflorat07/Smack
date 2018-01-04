@@ -465,7 +465,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="Fss-nY-chR" id="iZP-Up-Wup"/>
                         <outlet property="passTxt" destination="vYI-ws-Mx2" id="QJC-T6-KQH"/>
-                        <outlet property="userimg" destination="UOY-4D-bQq" id="QBB-c7-ACD"/>
+                        <outlet property="userImg" destination="UOY-4D-bQq" id="GqZ-Xf-wAz"/>
                         <outlet property="usernameTxt" destination="J1G-pA-DyO" id="F7P-an-EDk"/>
                         <segue destination="Lfp-e4-k7H" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="YgJ-zC-Icb"/>
                         <segue destination="pTp-Ds-ZtB" kind="show" identifier="toAvatarPicker" id="ntz-x2-JbO"/>

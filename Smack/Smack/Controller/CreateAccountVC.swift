@@ -9,12 +9,12 @@
 import UIKit
 
 class CreateAccountVC: UIViewController {
-
+    
     // Outlets
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passTxt: UITextField!
-    @IBOutlet weak var userimg: UIImageView!
+    @IBOutlet weak var userImg: UIImageView!
     
     //Variables
     var avatarName = "profileDefault"
@@ -22,9 +22,15 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
+    }
+    
     @IBAction func closePressed(_ sender: Any) {
         performSegue(withIdentifier: UNWIND, sender: nil)
     }
