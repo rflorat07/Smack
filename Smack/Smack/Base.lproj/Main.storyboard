@@ -230,6 +230,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="9yY-vT-loB" eventType="touchUpInside" id="OiI-X6-7iA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTN-Xy-FuF">
                                 <rect key="frame" x="62.5" y="336" width="250" height="30"/>
@@ -286,13 +289,19 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Ke-LT-yh0">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cTN-Xy-FuF" firstAttribute="top" secondItem="2sK-5R-Wg0" secondAttribute="bottom" id="0SV-kz-cRb"/>
+                            <constraint firstItem="8Ke-LT-yh0" firstAttribute="centerY" secondItem="o1Y-rU-Lel" secondAttribute="centerY" constant="-100" id="CdX-2Y-Duv"/>
                             <constraint firstItem="hGc-Qm-SGF" firstAttribute="top" secondItem="wBS-9G-ad1" secondAttribute="top" constant="8" id="YsW-Ts-P8n"/>
                             <constraint firstItem="2sK-5R-Wg0" firstAttribute="top" secondItem="9J7-hB-i4V" secondAttribute="bottom" constant="40" id="aXh-GG-gKN"/>
                             <constraint firstItem="2sK-5R-Wg0" firstAttribute="centerX" secondItem="o1Y-rU-Lel" secondAttribute="centerX" id="bow-Zd-wHi"/>
+                            <constraint firstItem="8Ke-LT-yh0" firstAttribute="centerX" secondItem="o1Y-rU-Lel" secondAttribute="centerX" id="dTy-bd-i9f"/>
                             <constraint firstItem="U2P-El-Hh9" firstAttribute="centerX" secondItem="o1Y-rU-Lel" secondAttribute="centerX" id="dcb-Mx-dil"/>
                             <constraint firstItem="wBS-9G-ad1" firstAttribute="trailing" secondItem="hGc-Qm-SGF" secondAttribute="trailing" constant="16" id="tSq-CK-bkv"/>
                             <constraint firstItem="9J7-hB-i4V" firstAttribute="centerX" secondItem="o1Y-rU-Lel" secondAttribute="centerX" id="ty7-WN-kGh"/>
@@ -303,6 +312,9 @@
                         <viewLayoutGuide key="safeArea" id="wBS-9G-ad1"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="Z0H-g1-NBA" id="Lr9-gB-YD9"/>
+                        <outlet property="spinner" destination="8Ke-LT-yh0" id="ZJJ-fW-r2S"/>
+                        <outlet property="usernameTxt" destination="VhN-eP-IZq" id="e3T-8V-eUt"/>
                         <segue destination="P9N-1R-4fc" kind="show" identifier="toCreateAccount" id="gxC-Lu-qgp"/>
                     </connections>
                 </viewController>
@@ -442,8 +454,8 @@
                                     <action selector="pickBGColorPressed:" destination="P9N-1R-4fc" eventType="touchUpInside" id="oKR-QQ-5V4"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Yia-rv-ipw">
-                                <rect key="frame" x="177.5" y="223.5" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Yia-rv-ipw">
+                                <rect key="frame" x="169.5" y="215.5" width="37" height="37"/>
                                 <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
