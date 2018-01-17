@@ -29,6 +29,8 @@
 		4FA237801FFD362400D07136 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2377F1FFD362400D07136 /* LoginVC.swift */; };
 		4FA237821FFD38BE00D07136 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA237811FFD38BE00D07136 /* CreateAccountVC.swift */; };
 		4FE47569200F3FBC005DDB7A /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47568200F3FBC005DDB7A /* ChannelCell.swift */; };
+		4FE4756C200F5126005DDB7A /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4756A200F5126005DDB7A /* AddChannelVC.swift */; };
+		4FE4756D200F5126005DDB7A /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE4756B200F5126005DDB7A /* AddChannelVC.xib */; };
 		62B9F973D42AA54C1C846D7C /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062DFC4D1C646CB90D2BCE21 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		4FA2377F1FFD362400D07136 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4FA237811FFD38BE00D07136 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		4FE47568200F3FBC005DDB7A /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		4FE4756A200F5126005DDB7A /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
+		4FE4756B200F5126005DDB7A /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		C2D5F72C0F415EAF1E770B87 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		F1B2216E4955453C414CA4D3 /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +102,7 @@
 		4F2BA2F91FFF7835005B2785 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				4FE4756B200F5126005DDB7A /* AddChannelVC.xib */,
 				4F2BA2F61FFF780D005B2785 /* ProfileVC.xib */,
 			);
 			path = XIBs;
@@ -159,6 +164,7 @@
 				4FA237811FFD38BE00D07136 /* CreateAccountVC.swift */,
 				4F1706C91FFE6EA30033ECEA /* AvatarPickerVC.swift */,
 				4F2BA2F51FFF780D005B2785 /* ProfileVC.swift */,
+				4FE4756A200F5126005DDB7A /* AddChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE4756D200F5126005DDB7A /* AddChannelVC.xib in Resources */,
 				4F2BA2F81FFF780D005B2785 /* ProfileVC.xib in Resources */,
 				4FA237671FFD1A4100D07136 /* LaunchScreen.storyboard in Resources */,
 				4FA237641FFD1A4100D07136 /* Assets.xcassets in Resources */,
@@ -337,6 +344,7 @@
 				4FA237821FFD38BE00D07136 /* CreateAccountVC.swift in Sources */,
 				4F1706C41FFE36370033ECEA /* AuthService.swift in Sources */,
 				4FA237801FFD362400D07136 /* LoginVC.swift in Sources */,
+				4FE4756C200F5126005DDB7A /* AddChannelVC.swift in Sources */,
 				4FA2377B1FFD240600D07136 /* GradientView.swift in Sources */,
 				4F1706CC1FFE71BD0033ECEA /* AvatarCell.swift in Sources */,
 				4FA2375D1FFD1A4100D07136 /* AppDelegate.swift in Sources */,
@@ -482,7 +490,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4M7AT6GDCK;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rogerflorat.Smack;
@@ -503,7 +511,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4M7AT6GDCK;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rogerflorat.Smack;
