@@ -2,13 +2,13 @@
 //  Channel.swift
 //  Smack
 //
-//  Created by Roger Florat on 05/01/18.
-//  Copyright © 2018 Roger Florat. All rights reserved.
+//  Created by Jonny B on 7/18/17.
+//  Copyright © 2017 Jonny B. All rights reserved.
 //
 
 import Foundation
 
-struct Channel {
+struct Channel : Decodable {
     public private(set) var channelTitle: String!
     public private(set) var channelDescription: String!
     public private(set) var id: String!

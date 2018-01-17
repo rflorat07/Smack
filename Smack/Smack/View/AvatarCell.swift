@@ -2,8 +2,8 @@
 //  AvatarCell.swift
 //  Smack
 //
-//  Created by Roger Florat on 04/01/18.
-//  Copyright © 2018 Roger Florat. All rights reserved.
+//  Created by Jonny B on 7/17/17.
+//  Copyright © 2017 Jonny B. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,6 @@ enum AvatarType {
 }
 
 class AvatarCell: UICollectionViewCell {
-    // Outlet
     
     @IBOutlet weak var avatarImg: UIImageView!
     
@@ -23,7 +22,7 @@ class AvatarCell: UICollectionViewCell {
         setUpView()
     }
     
-    func configureCell(index: Int, type: AvatarType)  {
+    func configureCell(index: Int, type: AvatarType) {
         if type == AvatarType.dark {
             avatarImg.image = UIImage(named: "dark\(index)")
             self.layer.backgroundColor = UIColor.lightGray.cgColor
@@ -33,13 +32,9 @@ class AvatarCell: UICollectionViewCell {
         }
     }
     
-    
-    func setUpView(){
+    func setUpView() {
         self.layer.backgroundColor = UIColor.lightGray.cgColor
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
     }
-    
-    
-    
 }

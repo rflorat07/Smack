@@ -2,8 +2,8 @@
 //  MessageService.swift
 //  Smack
 //
-//  Created by Roger Florat on 05/01/18.
-//  Copyright © 2018 Roger Florat. All rights reserved.
+//  Created by Jonny B on 7/18/17.
+//  Copyright © 2017 Jonny B. All rights reserved.
 //
 
 import Foundation
@@ -16,12 +16,12 @@ class MessageService {
     
     var channels = [Channel]()
     
-    func findAllChannel(completion: @escaping CompletionHandler ) {
-        Alamofire.request(URL_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON {
-            (response) in
+    func findAllChannel(completion: @escaping CompletionHandler) {
+        Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
             if response.result.error == nil {
-                guard let data = response.data else {return}
-                if let json = JSON(data: data).array{
+                guard let data = response.data else { return }
+                if let json = JSON(data: data).array {
                     for item in json {
                         let name = item["name"].stringValue
                         let channelDescription = item["description"].stringValue
@@ -37,6 +37,7 @@ class MessageService {
                 debugPrint(response.result.error as Any)
             }
         }
+        
     }
     
 }

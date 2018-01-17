@@ -2,15 +2,15 @@
 //  CircleImage.swift
 //  Smack
 //
-//  Created by Roger Florat on 04/01/18.
-//  Copyright © 2018 Roger Florat. All rights reserved.
+//  Created by Jonny B on 7/18/17.
+//  Copyright © 2017 Jonny B. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
 class CircleImage: UIImageView {
-
+    
     override func awakeFromNib() {
         setupView()
     }
@@ -24,5 +24,4 @@ class CircleImage: UIImageView {
         super.prepareForInterfaceBuilder()
         setupView()
     }
-
 }

@@ -2,8 +2,8 @@
 //  ChatVC.swift
 //  Smack
 //
-//  Created by Roger Florat on 03/01/18.
-//  Copyright © 2018 Roger Florat. All rights reserved.
+//  Created by Jonny B on 7/14/17.
+//  Copyright © 2017 Jonny B. All rights reserved.
 //
 
 import UIKit
@@ -15,20 +15,18 @@ class ChatVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
         if AuthService.instance.isLoggedIn {
-            AuthService.instance.findUserByEmail(completion: {
-                (success) in
+            AuthService.instance.findUserByEmail(completion: { (success) in
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
             })
         }
-        
-        MessageService.instance.findAllChannel {
-            (success) in
+        MessageService.instance.findAllChannel { (success) in
+            
         }
     }
 
